@@ -1,6 +1,6 @@
-const user = '[{"id":1,"nombre":"Atsumi","apellido":"Amaya","email":"AtsumiAmaya@gmail.com"},' +
-            '{"id":2,"nombre":"Carlos","apellido":"Lopez","email":"CarlosLopez@gmail.com"},' +
-            '{"id":3,"nombre":"Joshep","apellido":"Cconislla","email":"JoshepCconislla@gmail.com"}]';
+const user = '[{"id":1,"nombre":"Atsumi","apellido":"Amaya","dni":"87654321"},' +
+            '{"id":2,"nombre":"Carlos","apellido":"Lopez","dni":"82644721"},' +
+            '{"id":3,"nombre":"Joshep","apellido":"Cconislla","dni":"81857891"}]';
 
 const prod = '[{"id":1, "nombre":"Pepsi 750ml", "stock":15, "precio":2.50},' +
             '{"id":2, "nombre":"Arroz Paisana 3kg", "stock":4, "precio":7.50},' +
@@ -37,17 +37,19 @@ app.get('/', (req, res) => {
 });
 
 app.get('/clientes', (req, res) => {
+    /*
     connection.query('SELECT * FROM clientes', function(err, rows, field) {
-        if (err) throw err;
-        res.render('clientes',{users: rows});
-    })
+        if (err) throw err;*/
+        res.render('clientes',{users: objU});
+    //})
 });
 
 app.get('/productos', (req, res) => {
+    /*
     connection.query('SELECT * FROM productos', function(err, rows, field) {
-        if (err) throw err;
-        res.render('productos',{products: rows});
-    })
+        if (err) throw err;*/
+        res.render('productos',{products: objP});
+    //})
 });
 
 app.listen(5000, () => {
