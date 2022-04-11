@@ -12,6 +12,9 @@ var objU = JSON.parse(user);
 const express = require('express');
 const app = express();
 
+const mongoose = require('mongoose');
+require('dotenv').config();
+
 const ejs = require('ejs');
 const { send } = require('express/lib/response');
 const url = require('url'); 
